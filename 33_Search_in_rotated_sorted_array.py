@@ -6,7 +6,10 @@ class Solution(object):
             mid  = (low+high+1)//2 #adding 1 bcz low is 0 so 0+index will not give the proper length
             if nums[mid] == target:
                 return mid
-            
+            #main reason for splitting is if one half is sorted then we can only check the
+            #value if it is inside it or not but if it is not sorted then we will check
+            #in another half bcz one half must be sorted half so we can only check the 
+            #presence on value in one half and if it is not in here then it must be in other half
             if nums[low] < nums[mid]:
                 if nums[low] <= target <= nums[mid]:
                     high = mid-1
