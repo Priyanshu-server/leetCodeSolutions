@@ -1,4 +1,3 @@
-#Experimenting File
 class Solution(object):
     def search(self, nums, target):
         low,high = 0,len(nums)-1
